@@ -21,7 +21,7 @@ def is_url_valid(url: str) -> bool:
         print(f"An error occured: {e}")
         return False
 
-def findlinks(pdfpath: str):
+def findlinks(pdfpath: str) -> None:
     try:
         reader = PyPDF2.PdfReader(pdfpath)
         for page_num, page in enumerate(reader.pages, start=1):
